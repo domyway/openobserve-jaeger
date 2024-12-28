@@ -1,10 +1,22 @@
+# OpenObserve-Jaeger
+when we use jaeger-ui as front-ui, openobserve as trace backend
+we need to use openobserve-jaeger as a middleware to convert datastruct to jaeger-ui .
+and only support this api right now:
+
+```shell
+"/api/traces",
+"/api/traces/:id"
+"/api/services/:servicename/operations",
+"/api/services",
+```
+
 # setup
 
 ## step1
 config your own `openobserve` server address and auth token in `config.yaml` file.
 ```yaml
 openobserve:
-  addr: xxxx # ip:port or domain
+  addr: xxxx # the router of ip:port or domain
   auth: cm9vdEBleGFtcGxlLmNvbTpDb21wbGV4cGFzcyMxMjM= # openobserve auth
   default_trace_detail_search_range_time: 24 # unit: hour  ps: search max time range in traceid detail page, openobserve must provide start_time and end_time
   default_queryui_max_search_range_time: 24 # unit: hour    ps: jeager-ui search form support max range hour
