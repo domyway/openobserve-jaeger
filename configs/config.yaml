@@ -1,0 +1,8 @@
+openobserve:
+  addr: https://openobserve-your-instance.com
+  auth: cm9vdEBleGFtcGxlLmNvbTpDb21wbGV4cGFzcyMxMjM=
+  default_trace_detail_search_range_time: 24 # hour
+  default_queryui_max_search_range_time: 1 # query ui support max range hour
+  default_servicename_size: 1000 # /api/services max service list count
+  default_operationname_size: 10000 # /api/operations service operation list count
+  default_span_size: 10000 # /api/traces max span list count

@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  jaeger:
+    container_name: jaeger-ui
+    image: jaegertracing/all-in-one:1.29.0
+    ports:
+      - "16686:16686"
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    ports:
+      - "16687:16687"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf  # 挂载你的 Nginx 配置文件
