@@ -1,11 +1,11 @@
 # OpenObserve-Jaeger
-when we use jaeger-ui as front-ui, openobserve as trace backend
+when we use jaeger-ui as front-ui, openobserve as trace backend,
 we need to use openobserve-jaeger as a middleware to convert datastruct to jaeger-ui .
-and only support this api right now:
+and only support 4 api right now:
 
 ```shell
 "/api/traces",
-"/api/traces/:id"
+"/api/traces/:id",
 "/api/services/:servicename/operations",
 "/api/services",
 ```
