@@ -19,8 +19,6 @@ import (
 const (
 	searchTraceAPI           = "/api/default/_search?type=traces"
 	searchMetadataAPI        = "/api/default/_search?type=metadata"
-	searchMetricstaAPI       = "/api/default/prometheus/api/v1/query_range"
-	searchTraceValueAPI      = "/api/default/default/_values"
 	searchEncoding           = "base64"
 	SearchTraceDefaultStream = "default"
 	SearchTraceListStream    = "trace_list_index"
@@ -35,7 +33,6 @@ type OpenObserveService struct {
 	auth                     string
 	DefaultServicenameSize   int64
 	DefaultOperationnameSize int64
-	hashRing                 *hashRing
 }
 
 type OpenObserveResp struct {
